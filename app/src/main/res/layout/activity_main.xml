@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/view"
+        android:outlineSpotShadowColor="@color/grey"
+        android:outlineAmbientShadowColor="@color/grey"/>
+
+    <TextView
+        android:id="@+id/lastUpdatedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Last Updated"
+        android:textColor="@color/Green"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_total_cases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="total confirmed cases :"
+        android:textAllCaps="true"
+        android:textColor="@color/fadedPurple"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_list_total"
+        android:textSize="24sp"
+        tools:text="10000000"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_total_cases"/>
+
+    <TextView
+        android:id="@+id/tv_hours_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_list_total"
+        android:layout_toStartOf="@+id/tv_hours"
+        android:textColor="@color/red"
+        tools:text="200" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:id="@+id/tv_hours"
+        android:text="+ in last 24 hours"
+        android:textColor="@color/fadedPurple"
+        android:layout_below="@+id/tv_list_total"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="175dp"
+        android:id="@+id/layout_cv"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tv_hours"
+        android:layout_centerHorizontal="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="135dp"
+            android:layout_height="165dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginRight="20dp"
+            android:elevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_doc"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                   android:layout_centerHorizontal="true"
+                    android:src="@drawable/doctor" />
+                <TextView
+                    android:id="@+id/reco_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Total Recovered"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textColor="@color/Green"
+                    android:layout_below="@+id/iv_doc"/>
+
+                <TextView
+                    android:id="@+id/tv_recent_cv_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12345"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/reco_head"
+                    android:textColor="#000"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:layout_toStartOf="@+id/update_list_recovery"
+                    android:textColor="@color/Green"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tv_recent_cv_list"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/rcvr_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in 24 hours "
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/acme"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/Green"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/update_list_recovery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1222"
+                    android:textColor="@color/Green"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_recent_cv_list"
+                    android:layout_above="@+id/rcvr_24"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="135dp"
+            android:layout_height="165dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginLeft="20dp"
+            android:elevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_rip"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/skull" />
+                <TextView
+                    android:id="@+id/deceased_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Total Deceased"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textColor="@color/yellow"
+                    android:layout_below="@+id/iv_rip"/>
+
+                <TextView
+                    android:id="@+id/tv_list_cv_dec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12345"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/deceased_head"
+                    android:textColor="#000"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:layout_toStartOf="@+id/update_list_deceased"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tv_list_cv_dec"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/dec_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in 24 hours "
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/acme"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/yellow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/update_list_deceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1222"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_list_cv_dec"
+                    android:layout_above="@+id/dec_24"/>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_cv">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State/UT"
+            android:layout_weight="2"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginLeft="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFD"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/red"
+            android:fontFamily="@font/poppins_semibold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTVE"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/poppins_semibold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECVD"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/Green"
+            android:fontFamily="@font/poppins_semibold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DCSD"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginRight="12dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="16dp"/>
+
+
+</RelativeLayout>
